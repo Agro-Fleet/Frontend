@@ -1,0 +1,25 @@
+.screen{
+    display: flex;
+    height: 100vh;
+    .img{
+        background-color: #39841495;
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 60px;
+        h1{
+            font-size: 64px;
+            font-weight: bold;
+            color: white;
+        }
+        img {
+            height: 500px;
+            width: 500px;
+        }
+    }
+    .forms{
+        width: 65%;
+    }
+}
