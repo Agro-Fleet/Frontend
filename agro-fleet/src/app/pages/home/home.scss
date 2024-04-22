@@ -27,6 +27,12 @@ header {
         justify-content: space-between;
         align-items: center;
         gap: 24px;  
+        .link-login{
+            background-color: #4EA926;
+            cursor: pointer;
+            border-radius: 16px;
+            padding: 16px 24px;
+        }
         h3{
             font-size: 20px;
             font-weight: 400;

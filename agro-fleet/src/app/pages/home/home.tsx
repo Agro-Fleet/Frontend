@@ -13,7 +13,7 @@ function Home() {
         </div>
         <div className="link">
           <h3>Duvidas</h3>
-          <h3>Login</h3>
+          <h3 className="link-login">Login</h3>
         </div>
       </header>
       <section className="banner">
