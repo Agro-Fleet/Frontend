@@ -1,25 +1,93 @@
-.screen{
+.screen {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  .img {
+    background-color: #39841495;
+    width: 35%;
     display: flex;
-    height: 100vh;
-    .img{
-        background-color: #39841495;
-        width: 35%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+    padding: 20px 0;
+    h1 {
+      text-align: center;
+      font-size: 8vh;
+      font-weight: bold;
+      color: white;
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+  }
+  .form {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .login {
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      padding: 40px;
+      border-radius: 16px;
+      border: 1px solid #39841495;
+      .p-inputtext:focus {
+        border-color: #398414;
+        box-shadow: 0 0 0 0.2rem rgba(0, 128, 0, 0.158);
+        width: 100%;
+      }
+      .p-inputtext:hover {
+        border: 1px solid #39841495;
+      }
+      h1 {
+        font-size: 48px;
+        font-weight: 600;
+        color: #398414;
+        margin-bottom: 10px;
+      }
+      a {
+        color: #000;
+        font-size: 14px;
+      }
+      .entrar,
+      .sair {
+        width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 60px;
-        h1{
-            font-size: 64px;
-            font-weight: bold;
-            color: white;
-        }
-        img {
-            height: 500px;
-            width: 500px;
-        }
+        border-radius: 16px;
+      }
+      .entrar:focus, .sair:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 128, 0, 0.158);
+      }
+      .entrar {
+        background-color: #398414;
+        border: none;
+      }
+      .sair {
+        background-color: white;
+        color: #000;
+        border: 1px solid #39841495;
+      }
     }
-    .forms{
-        width: 65%;
+  }
+
+  @media (max-width: 768px) {
+    .forms {
+      width: 100%;
+      h1 {
+        font-size: 32px;
+      }
     }
+    .img {
+      display: none;
+    }
+  }
 }
