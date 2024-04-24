@@ -35,14 +35,19 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: auto;
+      width: 380px;
       padding: 40px;
       border-radius: 16px;
       border: 1px solid #39841495;
+      .p-float-label{
+        width: 100%;
+      }
+      .p-password, .p-inputtext{
+        width: 100%;
+      }
       .p-inputtext:focus {
         border-color: #398414;
         box-shadow: 0 0 0 0.2rem rgba(0, 128, 0, 0.158);
-        width: 100%;
       }
       .p-inputtext:hover {
         border: 1px solid #39841495;
@@ -63,6 +68,7 @@
         display: flex;
         justify-content: center;
         border-radius: 16px;
+        height: 56px;
       }
       .entrar:focus, .sair:focus {
         box-shadow: 0 0 0 0.2rem rgba(0, 128, 0, 0.158);

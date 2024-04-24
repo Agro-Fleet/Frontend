@@ -31,7 +31,6 @@ function Login() {
           </span>
           <Button className="entrar">Entrar</Button>
           <Button className="sair">Sair</Button>
-          {/* link redefinir senha */}
           <a href="#">Redefinir senha</a>
         </div>
       </div>
