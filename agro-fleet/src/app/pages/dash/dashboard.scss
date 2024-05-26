@@ -1,4 +1,52 @@
-.sidebar {
+.dashboard {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  .sidebar {
     display: flex;
     height: 100vh;
-};
+  }
+  .dash {
+    overflow-y: auto;
+    padding: 50px;
+    .filter {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 0;
+      .p-inputtext {
+        font-size: 24px;
+        border-radius: 16px;
+        border: 1px solid #e0e0e0;
+      }
+      Button{
+        line-height: 0;
+        gap: 10px;
+        background: linear-gradient(45deg,#398414, #4EA926);
+        font-size: 24px;
+        border-radius: 16px;
+        border: none;
+      }
+      Button:focus, .p-inputtext:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 128, 0, 0.158);
+      }
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 36px;
+      justify-content: flex-start;
+      width: 100%;
+      .card {
+        h3 {
+          font-size: 24px;
+          font-weight: 500;
+        }
+        padding: 10px;
+        height: 240px;
+        min-width: 240px;
+        flex: 1 0 auto;
+        border: 1px solid #e0e0e0;
+      }
+    }
+  }
+}
