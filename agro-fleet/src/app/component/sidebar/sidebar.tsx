@@ -31,8 +31,11 @@ const Sbar = () => {
             button: ({ level, active, disabled }) => {
               if (level === 0)
                 return {
+                  display: "flex",  
                   color: "#fff",
                   fontSize: "24px",
+                  fontWeight: "300",
+                  alignItems: "center",
                 };
             },
           }}
