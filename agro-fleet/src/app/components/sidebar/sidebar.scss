@@ -1,0 +1,30 @@
+.sidebar-content {
+    img {
+        filter: hue-rotate(90deg);
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+        margin: 15px 0;
+        display: flex;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #ccc;
+            border-radius: 50%;
+        }
+    }
+
+    .menu-icon {
+        margin-top: 0;
+    }
+
+    .sign-out-icon {
+        margin-top: auto;
+    }
+}
+
+
+
+
