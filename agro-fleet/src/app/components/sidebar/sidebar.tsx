@@ -29,36 +29,45 @@ const Sbar = () => {
       >
         <Menu
           menuItemStyles={{
-            button: ({ level, active, disabled }) => ({
-              display: 'flex',
-              color: '#fff',
-              fontSize: '24px',
-              fontWeight: '300',
-              alignItems: 'center',
-              marginBottom: '60px',
-              marginTop: '48px',
-            }),
+            button: ({ level, active, disabled }) => {
+              if (level === 0)
+                return {
+                  display: "flex",  
+                  color: "#fff",
+                  fontSize: "24px",
+                  fontWeight: "300",
+                  alignItems: "center",
+                };
+            },
           }}
         >
-          <MenuItem
-              style={{ marginBottom: "60px", marginTop: "48px" }}
-              onClick={() => setCollapsed(!collapsed)}
-          >
+          <div className="menu-sidebar">
+            <MenuItem
+                style={{ marginBottom: "60px", marginTop: "48px" }}
+                onClick={() => setCollapsed(!collapsed)}
+            >
               {!collapsed && <span>Agro Fleet</span>}
               <Image src={menu} alt="menu-icon" />
-          </MenuItem>
-          <MenuItem>
+            </MenuItem>
+          </div>
+          <div className="span-sidebar">
+            <MenuItem>
               <Image src={house} alt="icon" /> {!collapsed && <span>Home</span>}
-          </MenuItem>
-          <MenuItem>
+            </MenuItem>
+            <MenuItem>
               <Image src={user} alt="icon" /> {!collapsed && <span>Usuário</span>}
-          </MenuItem>
-          <MenuItem>
+            </MenuItem>
+            <MenuItem>
               <Image src={car} alt="icon" /> {!collapsed && <span>Veículo</span>}
-          </MenuItem>
-          <MenuItem>
+            </MenuItem>
+          </div>
+          <div className="logout-sidebar">
+            <MenuItem
+              style={{ marginBottom: "60px", marginTop: "48px" }}
+            >    
               <Image src={logout} alt="sign-out-icon" /> {!collapsed && <span>Logout</span>}
-          </MenuItem>
+            </MenuItem>
+          </div>
         </Menu>
       </Sidebar>
     </div>
