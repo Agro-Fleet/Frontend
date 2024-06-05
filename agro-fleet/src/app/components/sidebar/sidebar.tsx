@@ -28,6 +28,7 @@ const Sbar = () => {
         collapsed={collapsed}
       >
         <Menu
+          className="menuContent"
           menuItemStyles={{
             button: ({ level, active, disabled }) => {
               if (level === 0)
@@ -42,30 +43,33 @@ const Sbar = () => {
           }}
         >
           <div className="menu-sidebar">
-            <MenuItem
-                style={{ marginBottom: "60px", marginTop: "48px" }}
+            <div
+                className="menuItem"
+                style={{backgroundColor:"transparent", alignContent: "center",}}
                 onClick={() => setCollapsed(!collapsed)}
             >
-              {!collapsed && <span>Agro Fleet</span>}
+              {!collapsed && <p>Agro Fleet</p>}
               <Image src={menu} alt="menu-icon" />
-            </MenuItem>
+            </div>
           </div>
           <div className="span-sidebar">
-            <MenuItem>
-              <Image src={house} alt="icon" /> {!collapsed && <span>Home</span>}
+            <MenuItem style={{backgroundColor:"transparent"}}>
+              <Image src={house} alt="icon" /> {!collapsed && <p>Home</p>}
             </MenuItem>
-            <MenuItem>
-              <Image src={user} alt="icon" /> {!collapsed && <span>Usuário</span>}
+            <MenuItem style={{backgroundColor:"transparent"}}>
+              <Image src={user} alt="icon" /> {!collapsed && <p>Usuário</p>}
             </MenuItem>
-            <MenuItem>
-              <Image src={car} alt="icon" /> {!collapsed && <span>Veículo</span>}
+            <MenuItem style={{backgroundColor:"transparent"}}>
+              <Image src={car} alt="icon" /> {!collapsed && <p>Veículo</p>}
             </MenuItem>
           </div>
           <div className="logout-sidebar">
             <MenuItem
-              style={{ marginBottom: "60px", marginTop: "48px" }}
+              style={{
+                backgroundColor: "transparent",
+              }}
             >    
-              <Image src={logout} alt="sign-out-icon" /> {!collapsed && <span>Logout</span>}
+              <Image src={logout} alt="sign-out-icon" /> {!collapsed && <p>Sair</p>}
             </MenuItem>
           </div>
         </Menu>
