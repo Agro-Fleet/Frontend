@@ -9,15 +9,15 @@
       display: flex;
       justify-content: space-between;
       padding: 20px 0;
-      
+
       .p-inputtext {
         font-size: 24px;
         border-radius: 16px;
         border: 1px solid #e0e0e0;
       }
-      Button{
+      Button {
         gap: 10px;
-        background: linear-gradient(45deg,#398414, #4EA926);
+        background: linear-gradient(45deg, #398414, #4ea926);
         border-radius: 16px;
         border: none;
         max-width: fit-content;
@@ -31,7 +31,7 @@
           display: flex;
           font-family: "Poppins";
         }
-      
+
         span {
           align-content: center;
         }
@@ -40,40 +40,52 @@
           transform: scale(0.98);
         }
       }
-      Button:focus, .p-inputtext:focus {
+      Button:focus,
+      .p-inputtext:focus {
         box-shadow: 0 0 0 0.2rem rgba(0, 128, 0, 0.158);
       }
     }
     .cards {
       display: flex;
-      flex-wrap: wrap;  
+      flex-wrap: wrap;
       gap: 20px;
       justify-content: space-between;
       width: 100%;
       .card {
         h3 {
           font-size: 24px;
-          font-weight: 500;
+          font-weight: bold;
         }
+        p {
+          font-size: 20px;
+          font-weight: 300;
+        }
+        display: flex;
         padding: 10px;
         height: 240px;
         width: 240px;
         min-width: 180px;
-        border: 2px solid #E5E5E5;
+        border: 2px solid #d6d6d6;
         border-radius: 16px;
         box-shadow: none;
-        background:#E5E5E520;
+        background: #e5e5e520;
+        .card-itens {
+          margin: 1rem 0;
+          width: 220px;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
       }
-
-
     }
   }
 }
 
-
 @media screen and (max-width: 681px) {
   .filter {
     flex-direction: column;
-    gap:8px;
+    gap: 8px;
   }
 }
