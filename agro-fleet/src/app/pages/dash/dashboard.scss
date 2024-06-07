@@ -5,6 +5,7 @@
   .sidebar {
     display: flex;
     height: 100vh;
+    width: 100%;
   }
   .dash {
     overflow-y: auto;
@@ -13,19 +14,33 @@
       display: flex;
       justify-content: space-between;
       padding: 20px 0;
+      
       .p-inputtext {
         font-size: 24px;
         border-radius: 16px;
         border: 1px solid #e0e0e0;
       }
       Button{
-        line-height: 0;
         gap: 10px;
         background: linear-gradient(45deg,#398414, #4EA926);
-        font-size: 24px;
         border-radius: 16px;
         border: none;
+        max-width: fit-content;
+
+        label {
+          word-wrap: break-word;
+          line-height: 0;
+          font-size: 24px;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          font-family: "Poppins";
+        }
       
+        span {
+          align-content: center;
+        }
+
         &:active {
           transform: scale(0.98);
         }
@@ -47,12 +62,23 @@
         }
         padding: 10px;
         height: 240px;
-        min-width: 240px;
+        width: 240px;
+        min-width: 180px;
         border: 2px solid #E5E5E5;
         border-radius: 16px;
         box-shadow: none;
         background:#E5E5E520;
       }
+
+
     }
+  }
+}
+
+
+@media screen and (max-width: 681px) {
+  .filter {
+    flex-direction: column;
+    gap:8px;
   }
 }

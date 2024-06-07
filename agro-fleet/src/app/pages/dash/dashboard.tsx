@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import "./dashboard.scss";
-import Sbar from "../../component/sidebar/sidebar";
+import Sbar from "../../components/sidebar/sidebar";
 import { Card } from "primereact/card";
 import { Button } from "primereact/button";
 import "primeicons/primeicons.css";
@@ -12,9 +12,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <div className="sidebar">
-        <Sbar />
-      </div>
+        <Sbar/>
       <section className="dash">
         <div className="filter">
           <InputText

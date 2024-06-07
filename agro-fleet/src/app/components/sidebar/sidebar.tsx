@@ -23,6 +23,8 @@ const Sbar = () => {
         rootStyles={{
           [`.${sidebarClasses.container}`]: {
             backgroundColor: "#398414",
+            width: '100%',
+            height: "100vh",
           },
         }}
         collapsed={collapsed}

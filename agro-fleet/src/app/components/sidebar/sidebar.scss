@@ -70,6 +70,7 @@ span:hover {
 }
 
 img {
+    
     width: 30px;
     height: 30px;
     margin: 15px 0;
@@ -78,4 +79,10 @@ img {
     filter: hue-rotate(90deg);
     transition: filter 0.5s ease; 
 
+}
+
+@media screen {
+    .sidebar{
+        width: 20vw;
+    }
 }
