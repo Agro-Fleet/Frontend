@@ -12,7 +12,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-        <Sbar/>
+      <Sbar/>
       <section className="dash">
         <div className="filter">
           <InputText

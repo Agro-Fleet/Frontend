@@ -14,22 +14,20 @@ const OperationDetails: React.FC = () => {
     };
 
     return (
-        <div className="operation-details">
-            <aside className="sidebar">
-                <Sbar/>
-            </aside>
-            <main className="content">
+        <div className="operation-details"> 
+            <Sbar/>
+            <section className="content">
                 <header className="header">
                     Detalhes Operação
                 </header>
                 <div className="details">
-                    <div style={{display: 'flex', flexDirection: 'row'}}className="firstLayer">
+                    <div className="firstLayer">
                         <div className="card maquina">
                             <Image src={Uniport3030} alt="Maquina" />
                         </div>
                         <div className="card localizacao">Localização</div>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'row'}} className="secondLayer">
+                    <div className="secondLayer">
                         <div className="card alertas">
                             {Object.entries(avisos).map(([key, value]) => (
                                 <div key={key} className="alert">
@@ -45,7 +43,7 @@ const OperationDetails: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </main>
+            </section>
         </div>
     );
 };

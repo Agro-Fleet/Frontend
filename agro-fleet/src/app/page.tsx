@@ -13,8 +13,8 @@ const Page: React.FC = () => {
     <div>
       {/* <Home /> */}
       {/* <Login /> */}
-      <Dashboard />
-      {/* <OperationDetails /> */}
+      {/* <Dashboard /> */}
+      <OperationDetails />
     </div>
   );
 };
