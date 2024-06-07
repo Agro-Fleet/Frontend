@@ -38,10 +38,11 @@
       padding: 40px;
       border-radius: 16px;
       border: 1px solid #39841495;
-      .p-float-label{
+      .p-float-label {
         width: 100%;
       }
-      .p-password, .p-inputtext{
+      .p-password,
+      .p-inputtext {
         width: 100%;
       }
       .p-inputtext:focus {
@@ -69,7 +70,8 @@
         border-radius: 16px;
         height: 56px;
       }
-      .entrar:focus, .sair:focus {
+      .entrar:focus,
+      .sair:focus {
         box-shadow: 0 0 0 0.2rem rgba(0, 128, 0, 0.158);
       }
       .entrar {
@@ -84,11 +86,22 @@
     }
   }
 
-  @media (max-width: 768px) {
-    .forms {
+  @media (max-width: 1440px) {
+    background-color: #39841495;
+    .login {
+      background-color: white;
+    }
+    .form {
       width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 80px;
       h1 {
-        font-size: 32px;
+        font-size: 60px;
+        color: white;
+        font-weight: bold;
       }
     }
     .img {
