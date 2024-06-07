@@ -5,6 +5,7 @@ import "primereact/resources/themes/lara-light-cyan/theme.css";
 import "primereact/resources/primereact.min.css";
 import Login from './pages/login/login';
 import OperationDetails from './pages/Operation/operationDetails';
+import Dashboard from './pages/dash/dashboard';
 
 
 const Page: React.FC = () => {
@@ -12,7 +13,8 @@ const Page: React.FC = () => {
     <div>
       {/* <Home /> */}
       {/* <Login /> */}
-      <OperationDetails />
+      <Dashboard />
+      {/* <OperationDetails /> */}
     </div>
   );
 };
