@@ -1,0 +1,50 @@
+.filter {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+
+    .p-inputtext {
+      font-size: 24px;
+      color: #2F3033;
+      border-radius: 16px;
+      border: 2px solid #d6d6d6;
+      width: 100%;
+    }
+    
+    .p-input-icon-left {
+        display: flex;
+        flex-direction: row;
+    }
+
+    Button {
+      gap: 10px;
+      background: linear-gradient(45deg, #398414, #4ea926);
+      border-radius: 16px;
+      border: none;
+      max-width: fit-content;
+
+      label {
+        word-wrap: break-word;
+        line-height: 0;
+        font-size: 24px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        font-family: "Poppins";
+      }
+
+      span {
+        display: flex;
+        align-content: center;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+    Button:focus,
+    .p-inputtext:focus {
+      box-shadow: 0 0 0 0.2rem rgba(0, 128, 0, 0.158);
+    }
+  }

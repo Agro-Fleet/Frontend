@@ -2,10 +2,9 @@
 import React from "react";
 import "./dashboard.scss";
 import Sbar from "../../components/sidebar/sidebar";
+import Filter from "@/app/components/filter/filter";
 import { Card } from "primereact/card";
-import { Button } from "primereact/button";
 import "primeicons/primeicons.css";
-import { InputText } from "primereact/inputtext";
 
 const Dashboard = () => {
   const numCards = 70; // substitua por quantos cards você deseja renderizar
@@ -14,10 +13,7 @@ const Dashboard = () => {
     <div className="dashboard">
       <Sbar />
       <section className="dash">
-        <div className="filter">
-          <InputText placeholder="Pesquisar" />
-          <Button icon="pi pi-plus-circle" label="Criar operação" />
-        </div>
+        <Filter label="Criar operação"/>
         <div className="cards">
           {Array.from({ length: numCards }).map((_, index) => (
             <Card key={index} className="card">

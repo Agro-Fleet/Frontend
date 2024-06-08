@@ -6,6 +6,8 @@ import "primereact/resources/primereact.min.css";
 import Login from './pages/login/login';
 import OperationDetails from './pages/Operation/operationDetails';
 import Dashboard from './pages/dash/dashboard';
+import DashUser from './pages/dash_user/dashUser';
+import DashVehicle from './pages/dash_vehicle/dashVehicle';
 
 
 const Page: React.FC = () => {
@@ -14,7 +16,10 @@ const Page: React.FC = () => {
       {/* <Home /> */}
       {/* <Login /> */}
       {/* <Dashboard /> */}
-      <OperationDetails />
+      {/* <OperationDetails /> */}
+      <DashUser />
+      {/* <DashVehicle /> */}
+
     </div>
   );
 };

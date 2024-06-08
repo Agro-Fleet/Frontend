@@ -2,41 +2,63 @@
   display: flex;
   height: 100vh;
   width: 100%;
+
   .dash {
     overflow-y: auto;
     padding: 50px;
+    width: 100%;
+
     .filter {
       display: flex;
       justify-content: space-between;
       padding: 20px 0;
+
     }
-    .cards {
+    .user-cards {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      justify-content: space-between;
-      width: 100%;
-      .card {
+      flex-direction: column;
+      .user-card {
         h3 {
           font-size: 24px;
-          font-weight: bold;
+          font-weight: 600;
+
         }
         p {
-          font-size: 20px;
+          font-size: 18px;
           font-weight: 300;
         }
         display: flex;
         padding: 10px;
-        height: 240px;
-        width: 240px;
+        height: 74px;
+        width: 100%;
         min-width: 180px;
         border: 2px solid #d6d6d6;
         border-radius: 16px;
         box-shadow: none;
         background: #e5e5e520;
+        .card-content{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+          padding: 0 20px;
+          .user-information{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+
+            ::hover{
+              color: #398414;
+            }
+          }
+        }
         .card-itens {
-          margin: 1rem 0;
-          width: 220px;
+          width: 100%;
+          height: 100%;
           display: -webkit-box;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
