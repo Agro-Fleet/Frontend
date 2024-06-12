@@ -1,28 +1,27 @@
 "use client";
 import React from "react";
-import "./dashUser.scss";
-import Sbar from "../../components/sidebar/sidebar";
-import Filter from "@/app/components/filter/filter";
+import "@/app/styles/pages/dashVehicle.scss";
+import Filter from "@/app/components/filter";
+import { Card } from "primereact/card";
 import "primeicons/primeicons.css";
 
 
-const DashUser = () => {
+
+const DashVehicle = () => {
   const numCards = 10; // substitua por quantos cards você deseja renderizar
 
   return (
     <div className="dashboard">
-      <Sbar />
       <section className="dash">
-        <Filter label="Novo"/>
-
-        <div className="user-cards">
+        <Filter label="Nova Máquina" />
+        <div className="vehicle-cards">
           {Array.from({ length: numCards }).map((_, index) => (
-            <div key={index} className="user-card">
+            <div key={index} className="vehicle-card">
               <div className="card-content">
-                <div className="user-information">
-                  <h3 className="card-itens">Vinícius Silva Souza</h3>
+                <div className="vehicle-information">
+                  <h3 className="card-itens">Uniport 5030 NPK</h3>
                   <p className="card-itens">
-                    vinicius@gmail.com
+                    NLP 3032
                   </p>
                 </div>
                 <i className="pi pi-pen-to-square" style={
@@ -32,7 +31,7 @@ const DashUser = () => {
                       display: "flex", 
                       flexWrap: "wrap", 
                       marginLeft: "4px",
-                      cursor: "pointer",
+                      cursor: "pointer", 
                     }} 
                 />
               </div>
@@ -44,4 +43,4 @@ const DashUser = () => {
   );
 };
 
-export default DashUser;
+export default DashVehicle;

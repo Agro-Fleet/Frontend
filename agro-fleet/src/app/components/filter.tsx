@@ -1,13 +1,13 @@
 'use-client';
 import React from 'react';
-import "./filter.scss";
+import "../styles/components/filter.scss";
 import { InputText } from 'primereact/inputtext'; 
 import { Button } from 'primereact/button';
 import "primeicons/primeicons.css";
 
 interface FilterProps {
     label: string;
-  }
+}
 
 const Filter: React.FC<FilterProps> = ({ label }) => {
     return (

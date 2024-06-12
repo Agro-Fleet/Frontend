@@ -1,22 +1,24 @@
 "use client";
 import React from "react";
-import "./dashboard.scss";
-import Sbar from "../../components/sidebar/sidebar";
-import Filter from "@/app/components/filter/filter";
+import "@/app/styles/pages/dashboard.scss";
+import Filter from "@/app/components/filter";
 import { Card } from "primereact/card";
 import "primeicons/primeicons.css";
 
 const Dashboard = () => {
   const numCards = 70; // substitua por quantos cards você deseja renderizar
 
+  const handleOprDetails = () => {
+      window.location.href = '/pages/operationDetails'; // Redireciona para a rota do dashboard
+  };
+
   return (
     <div className="dashboard">
-      <Sbar />
       <section className="dash">
         <Filter label="Criar operação"/>
         <div className="cards">
           {Array.from({ length: numCards }).map((_, index) => (
-            <Card key={index} className="card">
+            <Card key={index} className="card" onClick={handleOprDetails}>
               <h3 className="card-itens">Operação soja amendoim</h3>
               <p className="card-itens">
                 <i className="pi pi-calendar" style={{ color: "#4ea926" }}></i>{" "}

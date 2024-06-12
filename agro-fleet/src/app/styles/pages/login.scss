@@ -40,10 +40,16 @@
       border: 1px solid #39841495;
       .p-float-label {
         width: 100%;
+        height: 42px;
+        
       }
       .p-password,
       .p-inputtext {
         width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        border: 1px solid #2F3033;
+        opacity: 20%;
       }
       .p-inputtext:focus {
         border-color: #398414;

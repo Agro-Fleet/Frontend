@@ -1,8 +1,8 @@
+'use client';
 import React from 'react';
 import Image from "next/image";
-import './operationDetails.scss';
-import Uniport3030 from '../../../../public/uniport3030.png';
-import Sbar from '../../components/sidebar/sidebar'
+import "@/app/styles/pages/operationDetails.scss";
+import Uniport3030 from '../../../../../public/uniport3030.png';
 
 
 const OperationDetails: React.FC = () => {
@@ -15,7 +15,6 @@ const OperationDetails: React.FC = () => {
 
     return (
         <div className="operation-details"> 
-            <Sbar/>
             <section className="content">
                 <header className="header">
                     Detalhes Operação

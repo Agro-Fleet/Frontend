@@ -1,17 +1,17 @@
 "use client";
 import React from "react";
-import "./dashVehicle.scss";
-import Sbar from "../../components/sidebar/sidebar";
+import "@/app/styles/pages/dashVehicle.scss";
+import Filter from "@/app/components/filter";
 import { Card } from "primereact/card";
 import "primeicons/primeicons.css";
-import Filter from "@/app/components/filter/filter";
+
+
 
 const DashVehicle = () => {
   const numCards = 10; // substitua por quantos cards você deseja renderizar
 
   return (
     <div className="dashboard">
-      <Sbar />
       <section className="dash">
         <Filter label="Nova Máquina" />
         <div className="vehicle-cards">

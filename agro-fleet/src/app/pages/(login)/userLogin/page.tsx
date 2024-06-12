@@ -1,17 +1,21 @@
 'use client'
 import React, { useState, useEffect } from "react";
-import "./login.scss";
-import login from "../../../../public/login.svg";
+import "@/app/styles/pages/login.scss";
+import login from "../../../../../public/login.svg";
 import Image from "next/image";
 import { InputText } from 'primereact/inputtext';
 import { Password } from 'primereact/password';
 import { Button } from 'primereact/button';
+import Link from 'next/link';
+
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isMobileView, setIsMobileView] = useState(false);
-
+  
+  const [credentials, setCredentials] = useState({ username: 'iago.com', password: '123' }); // Variável para armazenar as credenciais
+  
   useEffect(() => {
     const handleResize = () => {
       setIsMobileView(window.innerWidth <= 1440);
@@ -26,6 +30,17 @@ function Login() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  const handleLogin = () => {
+    // Verificar se as credenciais fornecidas coincidem
+    if (username === credentials.username && password === credentials.password) {
+      // Redirecionar para o dashboard
+      window.location.href = '/pages/list'; // Redireciona para a rota do dashboard
+    } else {
+      // Tratar autenticação inválida
+      alert('Credenciais inválidas. Por favor, tente novamente.');
+    }
+  };
 
   return (
     <div className="screen">
@@ -45,7 +60,7 @@ function Login() {
             <Password id="password" value={password} feedback={false} onChange={(e) => setPassword(e.target.value)} />
             <label htmlFor="password">Senha</label>
           </span>
-          <Button className="entrar">Entrar</Button>
+          <Button className="entrar" onClick={handleLogin}>Entrar</Button>
           <Button className="sair">Sair</Button>
           <a href="#">Redefinir senha</a>
         </div>
